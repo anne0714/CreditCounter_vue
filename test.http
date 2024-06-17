@@ -1,0 +1,56 @@
+POST http://127.0.0.1:9527/api/study  
+Content-Type: application/json
+
+{
+    "student": "111015001",
+    "course_id": "4"
+}
+
+###
+GET http://127.0.0.1:9527/api/study/111015001
+Accept: application/json
+
+###
+
+DELETE http://127.0.0.1:9527/api/study/111015002/2
+Accept: application/json
+###
+
+POST http://127.0.0.1:9527/api/course 
+Content-Type: application/json
+
+{
+    "course_name": "畢業計畫(二)",
+    "credit": 4,
+    "hours": 6,
+    "open": "藝設系設計組"
+}
+###
+
+#修改課程
+PUT http://127.0.0.1:9527/api/course
+Content-Type: application/json
+
+{
+    "course_id": 8,
+    "course_name": "視覺傳達設計",
+    "credit": 2,
+    "hours": 3,
+    "open_grade": "2上"
+}
+
+###
+
+#刪除課程
+DELETE http://127.0.0.1:9527/api/course/3
+Accept: application/json
+
+###
+
+# 顯示課程清單
+GET http://127.0.0.1:9527/api/course
+Accept: application/json
+###
+GET http://127.0.0.1:9527/api/major_course/藝設系設計組
+Accept: application/json
+### 
